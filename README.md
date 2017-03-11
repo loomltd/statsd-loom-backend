@@ -164,7 +164,7 @@ install **https-proxy-agent** module:
         $npm install https-proxy-agent
 
 After that you should add the *proxy* config to the StatsD config file
-in the librato configuration section:
+in the loom configuration section:
 
 ```js
 {
@@ -183,12 +183,12 @@ protocol to https in the URI.
 ## Tags
 
 Our backend plugin offers basic tagging support for your metrics you submit to Loom. You can specify what tags you want to submit to Loom using the *tags*
-config in the librato configuration section of the StatsD config file:
+config in the loom configuration section of the StatsD config file:
 
 
 ```js
 {
-  "librato" : {
+  "loom" : {
     "tags": { "os" : "ubuntu", "host" : "production-web-server-1", ... }
   }
 }
