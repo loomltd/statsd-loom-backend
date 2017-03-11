@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+var fs = require('fs'),
+  rootPath = require('path').resolve(__dirname, './../../..');
+
+if (!fs.existsSync(rootPath + '/stats.js')) {
+  console.error('This should run as a dependency inside etsy/statsd');
+  if (process.env.DEBUG) {
+    console.log('rootPath: ' + rootPath);
+    console.log('__dirname: ' + __dirname);
+  }
+  process.exit(1);
+}
+
+var configPath = rootPath + '/config.js';
+
+if (!fs.existsSync(configPath)) {
+  console.error('Could not locate the configuration file (config.js)');
+  if (process.env.DEBUG) {
+    console.log('rootPath: ' + rootPath);
+    console.log('__dirname: ' + __dirname);
+  }
+  process.exit(1);
+}
+
+require(rootPath + '/bin/statsd');

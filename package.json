@@ -1,0 +1,30 @@
+{
+  "author": "Ronny Lehmann <ronny@loomsystems.com>",
+  "name": "statsd-loom-backend",
+  "description": "A StatsD backend for Loom Metrics",
+  "version": "0.1.0",
+  "homepage": "https://github.com/loomltd/statsd-loom-backend",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/loomltd/statsd-loom-backend.git"
+  },
+  "keywords": [
+    "loom",
+    "metrics",
+    "statsd"
+  ],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {},
+  "main": "lib/loom.js",
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "bin": {
+    "statsd-loom": "./bin/statsd-loom"
+  }
+}
